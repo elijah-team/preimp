@@ -88,7 +88,7 @@ pub fn addDeps(
 
 fn linkGlad(exe: *std.build.LibExeObjStep, target: std.zig.CrossTarget) void {
     _ = target;
-    exe.addIncludeDir("native/imgui_impl/");
+    exe.addIncludePath("native/imgui_impl/");
     exe.addCSourceFile("native/imgui_impl/glad.c", &[_][]const u8{"-std=c99"});
     //exe.linkSystemLibrary("opengl");
 }
